@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>유경 삼중유리</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-overrides.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="{{ url_for('static', filename='css/lib/animate.css') }}" rel="stylesheet" media="screen, projection">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  </head>
+  <body class="pull_top">
+    <div class="navbar transparent navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="index.html">
+                <strong>유경</strong>
+            </a>
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a href="/" class="active">홈</a></li>
+                    <li><a href="/about">회사소개</a></li>
+                    <li><a href="/price">견적</a></li>
+                    <li><a href="/contact">오시는길</a></li>
+                    <li><a href="/blog">BLOG</a></li>
+                    <li><a href="/portfolio">시공사례</a></li>
+                    <li><a href="#">문의하기</a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                사이트맵
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/feature">회사소개</a></li>
+                                <li><a href="/service">견적</a></li>
+                                <li><a href="/portfolio">시공사례</a></li>
+                                <li><a href="/portfolio-item">오시는길</a></li>
+                                <li><a href="/coming-soon">BLOG</a></li>
+                                <li><a href="/sign-in">시공사례</a></li>
+                                <li><a href="#">문의하기</a></li>
+                                <!-- <li><a href="sign-up.html">Sign </a></li> -->
+                                <!-- <li><a href="backgrounds.html">Backgrounds</a></li> -->
+                            </ul>
+                        </li>
+                        <!-- <li><a class="btn-header" href="sign-up.html">회원가입</a></li> -->
+                        <!-- <li><a class="btn-header" href="sign-in.html">로그인</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="feature_slider" class="">
+        <!-- 
+            Each slide is composed by <img> and .info
+            - .info's position is customized with css in index.css
+            - each <img> parallax effect is declared by the following params inside its class:
+            
+            example: class="asset left-472 sp600 t120 z3"
+            left-472 means left: -472px from the center
+            sp600 is speed transition
+            t120 is top to 120px
+            z3 is z-index to 3
+            Note: Maintain this order of params
+
+            For the backgrounds, you can combine from the bgs folder :D
+        -->
+        <article class="slide" id="showcasing" style="background: url('{{ url_for('static', filename='img/backgrounds/ocean.jpg') }}') repeat-x top center;">
+            <img class="asset left-30 sp600 t120 z1 header-slider-img" src="{{ url_for('static', filename='img/slides/scene1/DSCN3907.jpg') }}"/>
+            <div class="info">
+                <h2> &nbsp 당신의 소중한공간, 삼중으로 보호하세요.</h2>
+            </div>
+        </article>
+        <article class="slide" id="ideas" style="background: url('{{ url_for('static', filename='img/backgrounds/deep-green.jpg') }}') repeat-x top center;">
+            <div class="info">
+                <h2>삼중유리, 진심이 만드는 삼중보호 창문</h2>
+            </div>
+            <img class="asset left-480 sp600 t260 z1 header-slider-img" src="{{ url_for('static', filename='img/slides/scene2/DSCN4391.jpg') }}" />
+            <img class="asset left-210 sp600 t213 z2 header-slider-img" src="{{ url_for('static', filename='img/slides/scene2/DSCN3899.jpg') }}" />
+            <img class="asset left60 sp600 t260 z1 header-slider-img" src="{{ url_for('static', filename='img/slides/scene2/DSCN3850.jpeg') }}" />
+        </article>
+        <article class="slide" id="tour" style="background: url('{{ url_for('static', filename='img/backgrounds/color-splash.jpg') }}') repeat-x top center;">
+            <img class="asset left-472 sp650 t210 z3" src="{{ url_for('static', filename='img/slides/scene3/ipad.png') }}" />
+            <img class="asset left-365 sp600 t270 z4" src="{{ url_for('static', filename='img/slides/scene3/iphone.png') }}" />
+            <img class="asset left-350 sp450 t135 z2" src="{{ url_for('static', filename='img/slides/scene3/desktop.png') }}" />
+            <img class="asset left-185 sp550 t220 z1" src="{{ url_for('static', filename='img/slides/scene3/macbook.png') }}" />
+            <div class="info">
+                <h2>Fully Responsive theme</h2>
+                <a href="features.html">TOUR THE PRODUCT</a>
+            </div>
+        </article>
+        <!-- <article class="slide" id="responsive" style="background: url('{{ url_for('static', filename='img/backgrounds/indigo.jpg') }}') repeat-x top center;">
+            <img class="asset left-472 sp600 t120 z3" src="{{ url_for('static', filename='img/slides/scene4/html5.png') }}" />
+            <img class="asset left-190 sp500 t120 z2" src="{{ url_for('static', filename='img/slides/scene4/css3.png') }}" />
+            <div class="info">
+                <h2>
+                    Responsive <strong>HTML5 & CSS3</strong>
+                    Theme
+                </h2>                
+            </div>
+        </article>      -->   
+    </section>
+
+    <div id="showcase">
+        <div class="container">
+            <div class="section_header">
+                <h3>삼중유리</h3>
+            </div>            
+            <div class="row feature_wrapper">
+                <!-- Features Row -->
+                <div class="features_op1_row">
+                    <!-- Feature -->
+                    <div class="span4 feature first">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="{{ url_for('static', filename='img/service1.png') }}">
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>Responsive theme</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="span4 feature">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="{{ url_for('static', filename='img/service2.png') }}">
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>Easy customization</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="span4 feature last">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="{{ url_for('static', filename='img/service3.png') }}">
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>Made with love</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="features">
+        <div class="container">
+            <div class="section_header">
+                <h3>특징</h3>
+            </div> 
+            <div class="row feature">
+                <div class="span6">
+                    <img src="{{ url_for('static', filename='img/showcase1.png') }}" />
+                </div>
+                <div class="span6 info">
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/features-ico1.png') }}" />
+                        Beautiful on all devices
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+            </div>
+            <div class="row feature ss">
+                <div class="span6 info">
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/features-ico2.png') }}" />
+                        Blog page included
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+                <div class="span6">
+                    <img src="{{ url_for('static', filename='img/showcase2.png') }}" class="pull-right" />
+                </div>
+            </div>
+            <div class="row feature ss">
+                <div class="span6">
+                    <img src="{{ url_for('static', filename='img/showcase3.png') }}" />
+                </div>
+                <div class="span6 info">
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/features-ico3.png') }}" />
+                        Simple and clean coming soon page
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pricing Option -->
+    <div id="in_pricing">
+        <div class="container">
+            <div class="section_header">
+                <h3>Pricing</h3>
+            </div>
+
+            <div class="row charts_wrapp">
+                <!-- Plan Box -->
+                <div class="span4">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Lite</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">35</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>4</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>10</strong>
+                                    Storage
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Box -->
+                <div class="span4 pro">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <img class="ribbon" src="{{ url_for('static', filename='img/badge.png') }}">
+                            <h3>Pro</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">99</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>25</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>Unlimited</strong>
+                                    Storage
+                                </p>
+                                <p>
+                                    <strong>Plus </strong>
+                                    Phone Support
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Box -->
+                <div class="span4 standar">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Standard</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">65</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>4</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>10</strong>
+                                    Storage
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="start">
+                <p>Start your free, no-risk, 14 day trial! </p>
+                <a href="pricing.html">Start Now!</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="clients">
+        <div class="container">
+            <div class="section_header">
+                <h3>적용사례</h3>
+            </div>
+            <div class="row">
+                <div class="span2 client">
+                    <div class="img client1"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client2"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client3"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client1"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client2"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- starts footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row sections">
+                <div class="span6 recent_posts">
+                    <h3 class="footer_header">
+                        유경
+                    </h3>
+                    <div class="post">
+                        <a>
+                            <span class="icon-stack icon-3x footer-icon">
+                              <i class="icon-circle icon-stack-base"></i>
+                              <i class="icon-info icon-light"></i>
+                            </span>
+                        </a>
+                        <p class="title">상호명 : 유경(창호전문프라자)</p>
+                        <p class="title">대표 : 박영철</p>
+                        <p class="title">사업자등록번호 : 124-50-91457</p>
+                    </div>
+                    <div class="post">
+                        <a>
+                            <span class="icon-stack icon-3x footer-icon">
+                              <i class="icon-circle icon-stack-base"></i>
+                              <i class="icon-comments icon-light"></i>
+                            </span>
+                        </a>
+                        <p class="title"><i class="icon-envelope-alt"></i> &nbsp contact@youkeong.com</p>
+                        <p class="title"><i class="icon-phone"></i> &nbsp 010-3707-9123</p>
+                        <p class="title"><i class="icon-twitter"></i> &nbsp @youkyeong</p>
+                    </div>
+                </div>
+                <div class="span6 contact">
+                    <h3 class="footer_header">
+                        문의
+                    </h3>
+                    <form action="#" method="post">
+                        <input type="text" placeholder="이름" required/>
+                        <input type="text" type="email" placeholder="이메일" required/>
+                        <textarea rows="3" placeholder="하고싶은말씀" required></textarea>
+                        <input type="submit" value="보내" />
+                    </form>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="span12">
+                    <div class="row social">
+                        <div class="span12">
+                            <a href="#" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                            <a href="#" class="gplus">
+                                <span class="socialicons ico3"></span>
+                                <span class="socialicons_h ico3h"></span>
+                            </a>
+                            <a href="#" class="flickr">
+                                <span class="socialicons ico4"></span>
+                                <span class="socialicons_h ico4h"></span>
+                            </a>
+                            <a href="#" class="pinterest">
+                                <span class="socialicons ico5"></span>
+                                <span class="socialicons_h ico5h"></span>
+                            </a>
+                            <a href="#" class="dribble">
+                                <span class="socialicons ico6"></span>
+                                <span class="socialicons_h ico6h"></span>
+                            </a>
+                            <a href="#" class="behance">
+                                <span class="socialicons ico7"></span>
+                                <span class="socialicons_h ico7h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="span12">
+                            © 2013 <a href="http://jasontody.com" alt="Jasontody.com">Jasontody</a>. All rights reserved.
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </footer>
+
+<!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index-slider.js') }}"></script>
+    </body>
+</html>
